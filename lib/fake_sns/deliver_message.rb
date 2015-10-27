@@ -1,5 +1,6 @@
 require "forwardable"
 require "faraday"
+require "sinatra"
 
 module FakeSNS
   class DeliverMessage

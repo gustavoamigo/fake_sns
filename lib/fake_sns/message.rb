@@ -23,7 +23,8 @@ module FakeSNS
     attribute :message, json
 
     def message_for_protocol(type)
-      return message.to_s
+      h = { "Message" => message.to_s }
+      return h.to_json
     end
   end
 end
