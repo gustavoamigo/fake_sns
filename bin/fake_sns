@@ -22,8 +22,8 @@ parser = OptionParser.new do |o|
     options[:database] = filename
   end
 
-  o.on "--log FILENAME", "Place to log" do |filename|
-    options[:log] = filename
+  o.on "--log FILENAME", "Place to log" do |logfile|
+    options[:log] = logfile
   end
 
   o.on "-p", "--port PORT", Integer, "Port to use (default: #{options[:port]})" do |port|
