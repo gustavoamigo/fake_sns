@@ -12,6 +12,7 @@ options = {
   :verbose   => false,
   :daemonize => false,
   :database  => nil,
+  :log => nil,
   :remove_sqs_queues_url => false,
 }
 
@@ -19,6 +20,10 @@ parser = OptionParser.new do |o|
 
   o.on "--database FILENAME", "Place to store the database (defaults to ~/.fake_sns.yml)" do |filename|
     options[:database] = filename
+  end
+
+  o.on "--log FILENAME", "Place to log" do |filename|
+    options[:log] = filename
   end
 
   o.on "-p", "--port PORT", Integer, "Port to use (default: #{options[:port]})" do |port|
